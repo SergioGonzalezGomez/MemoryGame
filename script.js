@@ -123,9 +123,9 @@ function comprobacion () {
         } else {
             planeta1.src = urlUniverse;
             planeta2.src = urlUniverse;
-        }
+        };
         clicks = 0; //CLICKS A 0 PARA QUE NO PUEDAS DAR MÁS DE 2 CLICKS POR INTENTO
     }, 1000);
-}
+};
 
 

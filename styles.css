@@ -25,9 +25,7 @@ body {
     border-radius: 10px;
     background-color: aquamarine;
 }
-.b-grid img:hover{
-    box-shadow: rgba(255, 254, 254, 0.418) 0px 10px 20px, rgba(243, 241, 241, 0.322) 0px 6px 6px;
-}
+
 button {
     padding: 5px;
     width: 10%;

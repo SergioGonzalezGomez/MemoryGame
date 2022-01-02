@@ -1,4 +1,4 @@
-/* ##Memory game
+ ##Memory game
 Dado el html ``exercise-1.html`` y el css`` exercise-1.css``, crea un archivo de javascript (recuerda que el
  javascript que
  proporcionamos nosotros es el que contiene la solución propuesta) para crear un juego de memoria con
@@ -30,7 +30,7 @@ Este juego es el típico juego de memoria por pareja en el que tendremos que **s
 
 Si has cumplido todas las condiciones...Enhorabuena! tienes un juego de memoría bastante resultón! Además si te
  interesa subir la dificultad no tienes más que hacer el array más grande y meter más imagenes...¿te atreves? :D
- */
+
 
 
 START GAME
