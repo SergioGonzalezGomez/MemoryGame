@@ -1,7 +1,21 @@
+body {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #080007;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    font-family: sans-serif;
+
+}
+
 .b-grid {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
+    align-self: center;
+    padding-left: 36px;
+    
 }
 
 .b-grid img {
@@ -10,4 +24,15 @@
     border: 3px solid #48ffc2;
     border-radius: 10px;
     background-color: aquamarine;
+}
+.b-grid img:hover{
+    box-shadow: rgba(255, 254, 254, 0.418) 0px 10px 20px, rgba(243, 241, 241, 0.322) 0px 6px 6px;
+}
+button {
+    padding: 5px;
+    width: 10%;
+    align-self: center;
+}
+h3 {
+    color: antiquewhite;
 }
