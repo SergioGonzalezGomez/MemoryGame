@@ -2,62 +2,74 @@
     {
         id: 1,
         name: 'earth',
-        img: 'images/earth.svg'
+        img: 'images/earth.svg',
+        estado: "down"
     },
     {
         id: 2,
         name: 'jupiter',
-        img: 'images/jupiter.svg'
+        img: 'images/jupiter.svg',
+        estado: "down"
     },
     {
         id: 3,
         name: 'mars',
-        img: 'images/mars.svg'
+        img: 'images/mars.svg',
+        estado: "down"
     },
     {
         id: 4,
         name: 'mercury',
-        img: 'images/mercury.svg'
+        img: 'images/mercury.svg',
+        estado: "down"
     },
     {
         id: 5,
         name: 'saturn',
-        img: 'images/saturn.svg'
+        img: 'images/saturn.svg',
+        estado: "down"
     },
     {
         id: 6,
         name: 'uranus',
-        img: 'images/uranus.svg'
+        img: 'images/uranus.svg',
+        estado: "down"
     },
     {
         id: 7,
         name: 'earth',
-        img: 'images/earth.svg'
+        img: 'images/earth.svg',
+        estado: "down"
     },
     {
         id: 8,
         name: 'jupiter',
-        img: 'images/jupiter.svg'
+        img: 'images/jupiter.svg',
+        estado: "down"
     },
     {
         id: 9,
         name: 'mars',
-        img: 'images/mars.svg'
+        img: 'images/mars.svg',
+        estado: "down"
     },
     {
         id: 10,
         name: 'mercury',
-        img: 'images/mercury.svg'
+        img: 'images/mercury.svg',
+        estado: "down"
     },
     {
         id: 11,
         name: 'saturn',
-        img: 'images/saturn.svg'
+        img: 'images/saturn.svg',
+        estado: "down"
     },
     {
         id: 12,
         name: 'uranus',
-        img: 'images/uranus.svg'
+        img: 'images/uranus.svg',
+        estado: "down"
     }
 ]
 //SELECCION DE VARIABLES
@@ -68,7 +80,8 @@ const gameBoard$$ = document.querySelector('[data-function="grid"]');
 let clicks = 0;
 let planeta1;
 let planeta2;
-let urlUniverse = "http://127.0.0.1:5500/images/universe.svg";
+let indice1;
+let indice2;
 
 //FUNCION QUE BARAJE LAS IMAGENES CADA VEZ QUE EMPIECE EL JUEGO
 function shuffle(arr) {
@@ -95,13 +108,21 @@ function start () {
 //CONTROL DE CLICKS Y COMPROBACION 
     for (let index = 0; index < tablero$$.length; index++) {
         tablero$$[index].addEventListener('click', () => {
-            if(tablero$$[index].src == urlUniverse && clicks == 0){
+            console.log(tablero$$[index].src);
+            
+            console.log(arrayImgs[index]);
+            if(cardArray[index].estado == "down" && clicks == 0){
                 tablero$$[index].src = arrayImgs[index];
                 planeta1 = tablero$$[index];
+                indice1 = index;
+                cardArray[index].estado = "up"
                 clicks++;
-            } else if (tablero$$[index].src == urlUniverse && clicks == 1){
+                
+            } else if (cardArray[index].estado == "down" && clicks == 1){
                 tablero$$[index].src = arrayImgs[index];
                 planeta2 = tablero$$[index];
+                indice2 = index;
+                cardArray[index].estado = "up"
                 clicks++;
                 comprobacion();
             }      
@@ -114,15 +135,17 @@ function comprobacion () {
     attempts$$.innerText++;
     setTimeout(() => {
         if (planeta1.src == planeta2.src) {
-            planeta1.src = "http://127.0.0.1:5500/images/tick.svg";
-            planeta2.src = "http://127.0.0.1:5500/images/tick.svg";
+            planeta1.src = "./images/tick.svg";
+            planeta2.src = "./images/tick.svg";
             score$$.innerText++;
             if (score$$.innerText == "6") {
                 alert("Lo has conseguido");
             }
         } else {
-            planeta1.src = urlUniverse;
-            planeta2.src = urlUniverse;
+            planeta1.src = "./images/universe.svg";
+            planeta2.src = "./images/universe.svg";
+            cardArray[indice1].estado = "down";
+            cardArray[indice2].estado = "down";
         };
         clicks = 0; //CLICKS A 0 PARA QUE NO PUEDAS DAR MÁS DE 2 CLICKS POR INTENTO
     }, 1000);
