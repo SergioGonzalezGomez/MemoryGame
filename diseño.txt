@@ -17,6 +17,12 @@ Este juego es el típico juego de memoria por pareja en el que tendremos que sel
 
 Si has cumplido todas las condiciones...Enhorabuena! tienes un juego de memoría bastante resultón! Además si te interesa subir la dificultad no tienes más que hacer el array más grande y meter más imagenes...¿te atreves? :D
 
-START GAME 1- Hacer un boton start game que cuando se pulse pinte en pantalla las imagenes aleatoriamente y restablezca todo. Para ello habrá que hacer un shuffle del array con las imagenes cada vez que le des a start game.
+START GAME 1- Hacer un boton start game que cuando se pulse pinte en pantalla las imagenes aleatoriamente y restablezca
+ todo. Para ello habrá que hacer un shuffle del array con las imagenes cada vez que le des a start game.
 
-CLICK Cuando des click a una imagen ésta se dara la vuelta mostrando la imagen, salvo que la imagen tenga ya un tick o se haya dado la vuelta El número máximo de clicks válidos tiene que ser dos, y al segundo subir en 1 el attempts y hacer las comprobaciones para ver si son pareja. Si son pareja las imagenes se convertiran en ticks subira en 1 el score. Si es la última pareja saldra un alert de felicitaciones Si no son pareja volverán a ser la imagen universe. el numero de clicks volvera a ser 0.
+CLICK Cuando des click a una imagen ésta se dara la vuelta mostrando la imagen, salvo que la imagen tenga ya un tick 
+o se haya dado la vuelta El número máximo de clicks válidos tiene que ser dos, y al segundo subir en 1 el attempts y 
+hacer las comprobaciones para ver si son pareja. Si son pareja las imagenes se convertiran en ticks subira en 1 el score. 
+Si es la última pareja saldra un alert de felicitaciones Si no son pareja volverán a ser la imagen universe.
+ el numero de clicks volvera a ser 0.
+

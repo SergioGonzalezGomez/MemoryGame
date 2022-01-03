@@ -93,6 +93,10 @@ function shuffle(arr) {
 }
 
 function start () {
+    for (let index = 0; index < cardArray.length; index++) {
+        cardArray[index].estado = "down";
+        
+    };
     gameBoard$$.innerHTML = "";
     const shuffledArray = shuffle(cardArray);
     let arrayImgs = shuffledArray.map(planet => (planet.img));
