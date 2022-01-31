@@ -113,7 +113,6 @@ function start () {
     for (let index = 0; index < tablero$$.length; index++) {
         tablero$$[index].addEventListener('click', () => {
             console.log(tablero$$[index].src);
-            
             console.log(arrayImgs[index]);
             if(cardArray[index].estado == "down" && clicks == 0){
                 tablero$$[index].src = arrayImgs[index];
